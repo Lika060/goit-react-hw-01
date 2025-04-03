@@ -1,4 +1,4 @@
-.table {
+/* .table {
     width: 100%;
     max-width: 600px;
     margin: 30px auto;
@@ -55,12 +55,48 @@ tr:last-child .tableBody:first-child {
 
 tr:last-child .tableBody:last-child {
     border-bottom-right-radius: 12px;
+} */
+.table {
+    width: 100%;
+    max-width: 600px;
+    margin: 30px auto;
+    border-collapse: collapse;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    border-radius: 12px;
+    box-shadow: 2px 3px 14px 2px rgba(201, 48, 5, 0.41);
+    overflow: hidden;
 }
+
+.tableHead {
+    background-color: rgba(0, 0, 0, 0.6);
+    border-bottom: 1px solid #fff;
+    color: #fff;
+    font-size: 18px;
+    letter-spacing: 0.04em;
+    padding: 12px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.tableBody {
+    background-color: transparent;
+    color: #fff;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 12px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+tr:nth-child(even) .tableBody {
+    background-color: rgba(255, 255, 255, 0.13);
+}
+
 @media (max-width: 768px) {
     .table {
-        width: 90%;
+        width: 95%;
         max-width: 100%;
-        overflow-x: auto;
     }
 
     .tableHead {
@@ -77,13 +113,27 @@ tr:last-child .tableBody:last-child {
 @media (max-width: 480px) {
     .table {
         display: block;
+        width: 100%;
         overflow-x: auto;
-        white-space: nowrap;
+        border-radius: 0;
+        box-shadow: none;
+        
     }
 
     .tableHead,
     .tableBody {
         font-size: 12px;
         padding: 6px;
+    }
+
+    tr {
+        display: flex;
+        flex-direction: column;
+        border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+        padding: 8px 0;
+    }
+
+    tr:last-child {
+        border-bottom: none;
     }
 }
