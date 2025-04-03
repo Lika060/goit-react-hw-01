@@ -124,6 +124,8 @@
     }
 
     .item {
+        align-items: center;
+        text-align: center;
         width: 100%;
         padding: 15px;
         border-right: none;
