@@ -93,6 +93,7 @@ tr:nth-child(even) .tableBody {
     background-color: rgba(255, 255, 255, 0.13);
 }
 
+
 @media (max-width: 768px) {
     .table {
         width: 95%;
@@ -112,38 +113,51 @@ tr:nth-child(even) .tableBody {
 
 @media (max-width: 480px) {
     .table {
+        width: 90%;
+        margin: 20px auto;
+        border-radius: 8px;
+        box-shadow: 1px 2px 8px rgba(201, 48, 5, 0.3);
         display: block;
-        width: 100%;
         overflow-x: auto;
-        border-radius: 0;
-        box-shadow: none;
     }
 
-    .tableHead,
-    .tableBody {
-        font-size: 14px;
-        padding: 10px;
+    thead,
+    tbody,
+    tr {
+        display: block;
+        width: 100%;
     }
 
     tr {
         display: flex;
         flex-direction: column;
-        width: 100%;
-        border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
         padding: 10px 0;
+        margin-bottom: 10px;
     }
 
     tr:last-child {
         border-bottom: none;
     }
 
-    td {
-        display: block;
-        width: 100%;
+    .tableHead {
+        font-size: 14px;
+        padding: 8px;
+        background-color: rgba(0, 0, 0, 0.8);
+        border-bottom: none;
+    }
+
+    .tableBody {
+        font-size: 14px;
         padding: 8px 12px;
         text-align: left;
-        word-wrap: break-word;
-        font-size: 14px;
-        box-sizing: border-box;
+        border-bottom: none;
+    }
+
+    .tableBody::before {
+        content: attr(data-label);
+        font-weight: 600;
+        color: rgba(255, 255, 255, 0.8);
+        margin-right: 10px;
     }
 }
