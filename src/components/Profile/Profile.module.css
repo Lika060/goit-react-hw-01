@@ -73,3 +73,69 @@
     font-weight: 900;
     font-size: 24px;
 }
+@media (max-width: 768px) {
+    .wrapper {
+        width: 80%;
+    }
+
+    .name {
+        font-size: 28px;
+    }
+
+    .tag,
+    .address {
+        font-size: 16px;
+    }
+
+    .text {
+        font-size: 16px;
+    }
+
+    .num {
+        font-size: 22px;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .wrapper {
+        width: 95%;
+    }
+
+    .img {
+        width: 140px;
+        height: 140px;
+    }
+
+    .name {
+        font-size: 24px;
+    }
+
+    .tag,
+    .address {
+        font-size: 14px;
+    }
+
+    .list {
+        flex-direction: column;
+    }
+
+    .item {
+        width: 100%;
+        padding: 15px;
+        border-right: none;
+        border-bottom: 2px solid gray;
+    }
+
+    .item:last-child {
+        border-bottom: none;
+    }
+
+    .text {
+        font-size: 14px;
+    }
+
+    .num {
+        font-size: 20px;
+    }
+}

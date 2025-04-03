@@ -56,3 +56,34 @@ tr:last-child .tableBody:first-child {
 tr:last-child .tableBody:last-child {
     border-bottom-right-radius: 12px;
 }
+@media (max-width: 768px) {
+    .table {
+        width: 90%;
+        max-width: 100%;
+        overflow-x: auto;
+    }
+
+    .tableHead {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    .tableBody {
+        font-size: 14px;
+        padding: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    .tableHead,
+    .tableBody {
+        font-size: 12px;
+        padding: 6px;
+    }
+}
