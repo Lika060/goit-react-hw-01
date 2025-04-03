@@ -117,13 +117,12 @@ tr:nth-child(even) .tableBody {
         overflow-x: auto;
         border-radius: 0;
         box-shadow: none;
-        
     }
 
     .tableHead,
     .tableBody {
-        font-size: 12px;
-        padding: 6px;
+        font-size: 14px;
+        padding: 8px;
     }
 
     tr {
@@ -135,5 +134,11 @@ tr:nth-child(even) .tableBody {
 
     tr:last-child {
         border-bottom: none;
+    }
+
+    td {
+        padding: 8px 12px;
+        text-align: left;
+     
     }
 }
