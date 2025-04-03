@@ -122,14 +122,14 @@ tr:nth-child(even) .tableBody {
     .tableHead,
     .tableBody {
         font-size: 14px;
-        padding: 8px;
+        padding: 10px;
     }
 
     tr {
-        display: flex;
-        flex-direction: column;
+        display: block;
+        width: 100%;
         border-bottom: 2px solid rgba(255, 255, 255, 0.2);
-        padding: 8px 0;
+        padding: 10px 0;
     }
 
     tr:last-child {
@@ -137,8 +137,12 @@ tr:nth-child(even) .tableBody {
     }
 
     td {
+        display: inline-block;
+        width: 100%;
         padding: 8px 12px;
         text-align: left;
-     
+        word-wrap: break-word;
+        font-size: 14px;
+       
     }
 }

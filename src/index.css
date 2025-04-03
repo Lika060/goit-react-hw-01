@@ -66,10 +66,11 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
 @media (max-width: 768px) {
   body {
-    background-size: contain;
-    /* Адаптація для маленьких екранів */
-    background-position: top;
+    background-size: cover;
+    background-position: center center;
+ 
   }
 }
