@@ -126,7 +126,8 @@ tr:nth-child(even) .tableBody {
     }
 
     tr {
-        display: block;
+        display: flex;
+        flex-direction: column;
         width: 100%;
         border-bottom: 2px solid rgba(255, 255, 255, 0.2);
         padding: 10px 0;
@@ -137,12 +138,12 @@ tr:nth-child(even) .tableBody {
     }
 
     td {
-        display: inline-block;
+        display: block;
         width: 100%;
         padding: 8px 12px;
         text-align: left;
         word-wrap: break-word;
         font-size: 14px;
-       
+        box-sizing: border-box;
     }
 }
